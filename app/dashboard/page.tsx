@@ -191,21 +191,21 @@ export default function Dashboard() {
               <CardContent>
                 <div className="grid grid-cols-2 gap-4">
                 
-                <Link href={'/ocr'}>
+                <Link href={'/dashboard/ocr'}>
                   <Button className="h-20 w-full flex-col items-center justify-center" variant="outline">
                     <Plus className="h-5 w-5 mb-2" />
                     OCR Tool 
                   </Button>
                   </Link>
 
-                <Link href={'/report'}>
+                <Link href={'/dashboard/report'}>
                   <Button className="h-20 w-full flex-col items-center justify-center" variant="outline">
                     <FileText className="h-5 w-5 mb-2" />
                     Create Report
                   </Button>
                   </Link>
 
-                <Link href={'/convert-docs'}>
+                <Link href={'/dashboard/convert-docs'}>
 
                   <Button className="h-20 w-full flex-col items-center justify-center" variant="outline">
                     <Download className="h-5 w-5 mb-2" />

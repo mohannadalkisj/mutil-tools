@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { fileToBase64 } from '@/lib/utils'
 import { processImage } from '@/lib/actions/processimage'
+import Link from 'next/link'
 
 export default function OCRTool() {
   const [file, setFile] = useState<File | null>(null)
@@ -41,6 +42,10 @@ export default function OCRTool() {
   }
 
   return (
+    <div>
+      <Link href={'/dashboard'}>
+      <Button variant={'outline'}>Back</Button> 
+      </Link>
     <Card className="w-full max-w-md mx-auto mt-4">
       <CardHeader>
         <CardTitle>OCR Tool</CardTitle>
@@ -67,6 +72,7 @@ export default function OCRTool() {
         )}
       </CardContent>
     </Card>
+    </div>
   )
 }
 
