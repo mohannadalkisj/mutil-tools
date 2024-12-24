@@ -2,16 +2,15 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { Facebook, Linkedin, Youtube, Instagram, ArrowRight, FileText, Search, ArrowBigLeft, Folder, Cog, BarChart } from 'lucide-react'
+import { Facebook, Linkedin, Youtube, Instagram, ArrowRight, Link2, Search, Folder, Cog, BarChart } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { MainNav } from "@/components/main-nav"
 import { Card, CardContent, CardDescription, CardHeader } from "@/components/ui/card"
-import { title } from "process"
 const workflows = [
   {
-    icon: <FileText className="h-8 w-8 text-gray-600" />,
-    title: "Documents",
+    icon: <Link2 className="h-8 w-8 text-gray-600" />,
+    title: "Short Links",
     gradient: "from-purple-500 to-red-500"
   },
   {
@@ -40,6 +39,20 @@ const workflows = [
     gradient: "from-neutral-400 to-pink-400"
   }
 ]
+const items = [
+  {
+    title: 'Products', href: '/'
+  },
+  {
+    title: 'Price', href: '/'
+  },
+  {
+    title: 'About', href: '/'
+  },
+  {
+    title: 'Contact', href: '/'
+  },
+]
 
 export default function LandingPage() {
   const [scrollY, setScrollY] = useState(0)
@@ -67,6 +80,7 @@ export default function LandingPage() {
 
   return (
     <div className="relative w-full ">
+      {<MainNav items={items} />}
 
       {/* Animated background shapes */}
       <div className="absolute inset-0 overflow-hidden">
@@ -145,12 +159,12 @@ export default function LandingPage() {
             transition={{ delay: 1 }}
             className="space-y-4  items-center"
           >
-            <div className=" gap-6 py-12 grid grid-cols-4 ">
+            <div className=" gap-6 py-12 grid grid-cols-4 text-">
               {[
-                { Icon: Facebook, color: "blue", href: "#" },
-                { Icon: Youtube, color: "red", href: "#" },
-                { Icon: Instagram, color: "pink", href: "#" },
-                { Icon: Linkedin, color: "blue", href: "#" }
+                { Icon: Facebook, color: "hover:text-blue-500", href: "#" },
+                { Icon: Youtube, color: "hover:text-red-500", href: "#" },
+                { Icon: Instagram, color: "hover:text-pink-500", href: "#" },
+                { Icon: Linkedin, color: "hover:text-blue-500", href: "#" }
               ].map(({ Icon, color, href }, index) => (
                 <motion.div
                   key={index}
@@ -159,10 +173,10 @@ export default function LandingPage() {
                 >
                   <Link
                     href={href}
-                    className={`group relative block p-2 text-${color}-700`}
+                    className={`group relative block p-2 ${color}`}
                   >
                     <div className="absolute inset-0 rounded-lg bg-gray-100 opacity-0 transition-opacity group-hover:opacity-100" />
-                    <Icon className="relative h-6 w-6 m-auto" />
+                    <Icon className={`relative h-6 w-6 m-auto`} />
                     <span className="sr-only">Social Media Link</span>
                   </Link>
                 </motion.div>

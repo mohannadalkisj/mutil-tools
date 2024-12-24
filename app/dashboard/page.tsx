@@ -1,4 +1,4 @@
-import { Bell, ChevronDown, Layout, LogOut, Menu, MessageSquare, PieChart, Settings, Users, Plus, FileText, Download, Upload, Trash2, BarChart2, Zap, HelpCircle } from 'lucide-react'
+import { Bell, ChevronDown, Layout, LogOut, Menu, MessageSquare, PieChart, Settings, Plus, FileText, Download, Upload, Trash2, BarChart2, Zap, HelpCircle, DownloadCloud } from 'lucide-react'
 import Link from "next/link"
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
@@ -32,8 +32,8 @@ export default function Dashboard() {
               className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900"
               href="#"
             >
-              <Users className="h-4 w-4" />
-              Users
+              <DownloadCloud className="h-4 w-4" />
+              Documents
             </Link>
             <Link
               className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900"
@@ -100,8 +100,8 @@ export default function Dashboard() {
                   className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900"
                   href="#"
                 >
-                  <Users className="h-4 w-4" />
-                  Users
+                  <DownloadCloud className="h-4 w-4" />
+                  Documents
                 </Link>
                 <Link
                   className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900"
@@ -142,8 +142,8 @@ export default function Dashboard() {
           <div className="mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">Total Users</CardTitle>
-                <Users className="h-4 w-4 text-muted-foreground" />
+                <CardTitle className="text-sm font-medium">Total Documents</CardTitle>
+                <DownloadCloud className="h-4 w-4 text-muted-foreground" />
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">1,234</div>
@@ -152,8 +152,8 @@ export default function Dashboard() {
             </Card>
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                <CardTitle className="text-sm font-medium">Active Users</CardTitle>
-                <Users className="h-4 w-4 text-muted-foreground" />
+                <CardTitle className="text-sm font-medium">Converted Documents</CardTitle>
+                <DownloadCloud className="h-4 w-4 text-muted-foreground" />
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">789</div>
@@ -173,7 +173,7 @@ export default function Dashboard() {
             <Card>
               <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                 <CardTitle className="text-sm font-medium">Active Now</CardTitle>
-                <Users className="h-4 w-4 text-muted-foreground" />
+                <DownloadCloud className="h-4 w-4 text-muted-foreground" />
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">87</div>
@@ -223,11 +223,11 @@ export default function Dashboard() {
                   </Button>
                   <Button className="h-20 w-full flex-col items-center justify-center" variant="outline">
                     <Zap className="h-5 w-5 mb-2" />
-                    Automate
+                    Shortred
                   </Button>
                   <Button className="h-20 w-full flex-col items-center justify-center" variant="outline">
                     <Trash2 className="h-5 w-5 mb-2" />
-                    Clear Cache
+                    Clear Data
                   </Button>
                   <Button className="h-20 w-full flex-col items-center justify-center" variant="outline">
                     <HelpCircle className="h-5 w-5 mb-2" />

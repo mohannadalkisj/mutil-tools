@@ -4,7 +4,6 @@ import { Metadata } from "next"
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
-import { SiteHeader } from "@/components/site-header"
 import { MainNav } from "@/components/main-nav"
 
 export const metadata: Metadata = {
@@ -27,20 +26,6 @@ export const metadata: Metadata = {
 interface RootLayoutProps {
   children: React.ReactNode
 }
-const items=[
-  {
-    title: 'Products',href:'/'
-},
-{
-  title: 'Price',href:'/'
-},
-{
-title: 'About',href:'/'
-},
-{
-title: 'Contact',href:'/'
-},
-]
 
 
 
@@ -57,8 +42,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
             
           )}
         >
-        <MainNav items={items}/>
-
             <div className="  relative flex flex-col">
               <div className="flex-1 m-1">{children}</div>
             </div>
