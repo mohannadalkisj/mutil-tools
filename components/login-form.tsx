@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import Link from "next/link"
+import { GoogleIcon } from "./google-icon"
 
 export function LoginForm({
   className,
@@ -51,6 +52,8 @@ export function LoginForm({
                 Login
               </Button>
               <Button variant="outline" className="w-full">
+              <GoogleIcon/>
+
                 Login with Google
               </Button>
             </div>
