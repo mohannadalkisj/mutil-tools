@@ -3,7 +3,7 @@ export type SiteConfig = typeof siteConfig
 export const siteConfig = {
   name: "Reez App",
   description:
-    "Beautifully designed components built with Radix UI and Tailwind CSS.",
+    "Powerful tools that are essential for success and efficiency.",
   mainNav: [
     {
       title: "Home",
