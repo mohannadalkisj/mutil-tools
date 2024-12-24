@@ -60,7 +60,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <MainNav items={items}/>
 
             <div className="  relative flex flex-col">
-              <div className="flex-1">{children}</div>
+              <div className="flex-1 m-1">{children}</div>
             </div>
         </body>
       </html>

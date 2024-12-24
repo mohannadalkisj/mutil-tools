@@ -145,7 +145,7 @@ export default function LandingPage() {
             transition={{ delay: 1 }}
             className="space-y-4  items-center"
           >
-            <div className="flex gap-6 py-12 grid grid-cols-4 ">
+            <div className=" gap-6 py-12 grid grid-cols-4 ">
               {[
                 { Icon: Facebook, color: "blue", href: "#" },
                 { Icon: Youtube, color: "red", href: "#" },
