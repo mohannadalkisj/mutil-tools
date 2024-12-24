@@ -17,7 +17,7 @@ export default function Dashboard() {
           <div className="flex h-14 items-center border-b px-4">
             <Link className="flex items-center gap-2 font-semibold" href="#">
               <Layout className="h-6 w-6" />
-              <span>Acme Inc</span>
+              <span>REEZ Inc</span>
             </Link>
           </div>
           <nav className="flex-1 px-2 py-4">
@@ -181,35 +181,8 @@ export default function Dashboard() {
               </CardContent>
             </Card>
           </div>
-          <div className="mt-6 grid gap-6 md:grid-cols-2">
-            <Card>
-              <CardHeader>
-                <CardTitle>Recent Activity</CardTitle>
-                <CardDescription>Latest user actions and system events</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {[
-                    { user: "Alice", action: "logged in", time: "2 minutes ago" },
-                    { user: "Bob", action: "updated profile", time: "15 minutes ago" },
-                    { user: "Charlie", action: "sent a message", time: "1 hour ago" },
-                    { user: "David", action: "uploaded a file", time: "3 hours ago" },
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center">
-                      <Avatar className="h-9 w-9">
-                        <AvatarFallback>{item.user[0]}</AvatarFallback>
-                      </Avatar>
-                      <div className="ml-4 space-y-1">
-                        <p className="text-sm font-medium leading-none">
-                          {item.user} {item.action}
-                        </p>
-                        <p className="text-sm text-muted-foreground">{item.time}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+          <div className="mt-6 grid gap-6">
+          
             <Card>
               <CardHeader>
                 <CardTitle>Tools</CardTitle>
@@ -217,18 +190,29 @@ export default function Dashboard() {
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-2 gap-4">
+                
+                <Link href={'/ocr'}>
                   <Button className="h-20 w-full flex-col items-center justify-center" variant="outline">
                     <Plus className="h-5 w-5 mb-2" />
-                    New Project
+                    OCR Tool 
                   </Button>
+                  </Link>
+
+                <Link href={'/report'}>
                   <Button className="h-20 w-full flex-col items-center justify-center" variant="outline">
                     <FileText className="h-5 w-5 mb-2" />
                     Create Report
                   </Button>
+                  </Link>
+
+                <Link href={'/convert-docs'}>
+
                   <Button className="h-20 w-full flex-col items-center justify-center" variant="outline">
                     <Download className="h-5 w-5 mb-2" />
-                    Download Data
+                    Convert Documents
                   </Button>
+                  </Link>
+
                   <Button className="h-20 w-full flex-col items-center justify-center" variant="outline">
                     <Upload className="h-5 w-5 mb-2" />
                     Upload Files

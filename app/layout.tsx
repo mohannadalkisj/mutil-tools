@@ -5,6 +5,7 @@ import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { SiteHeader } from "@/components/site-header"
+import { MainNav } from "@/components/main-nav"
 
 export const metadata: Metadata = {
   title: {
@@ -26,6 +27,23 @@ export const metadata: Metadata = {
 interface RootLayoutProps {
   children: React.ReactNode
 }
+const items=[
+  {
+    title: 'Products',href:'/'
+},
+{
+  title: 'Price',href:'/'
+},
+{
+title: 'About',href:'/'
+},
+{
+title: 'Contact',href:'/'
+},
+]
+
+
+
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
@@ -34,12 +52,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <head />
         <body
           className={cn(
-            "min-h-screen bg-background font-sans antialiased",
+            "min-h-screen font-sans antialiased text-gary-900",
             fontSans.variable
+            
           )}
         >
-            <div className="relative flex min-h-screen flex-col">
-              <SiteHeader />
+        <MainNav items={items}/>
+
+            <div className="  relative flex min-h-screen flex-col">
               <div className="flex-1">{children}</div>
             </div>
         </body>
