@@ -79,8 +79,9 @@ export default function LandingPage() {
   ]
 
   return (
-    <div className="relative w-full ">
+    <>
       {<MainNav items={items} />}
+    <div className="relative w-full ">
 
       {/* Animated background shapes */}
       <div className="absolute inset-0 overflow-hidden">
@@ -238,6 +239,8 @@ export default function LandingPage() {
         </motion.div>
       </div>
     </div>
+    </>
+
   )
 }
 
