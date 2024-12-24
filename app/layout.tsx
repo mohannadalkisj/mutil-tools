@@ -52,14 +52,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <head />
         <body
           className={cn(
-            "min-h-screen font-sans antialiased text-gary-900",
+            " md:overflow-hidden font-sans antialiased text-gary-900",
             fontSans.variable
             
           )}
         >
         <MainNav items={items}/>
 
-            <div className="  relative flex min-h-screen flex-col">
+            <div className="  relative flex flex-col">
               <div className="flex-1">{children}</div>
             </div>
         </body>

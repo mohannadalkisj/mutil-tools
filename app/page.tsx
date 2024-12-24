@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { MainNav } from "@/components/main-nav"
 import { Card, CardContent, CardDescription, CardHeader } from "@/components/ui/card"
+import { title } from "process"
 const workflows = [
   {
     icon: <FileText className="h-8 w-8 text-gray-600" />,
@@ -50,13 +51,22 @@ export default function LandingPage() {
   }, [])
 
   const features = [
-    "Source that you can cop FreeFreey",
-    "and paste into your apps. Free.",
-    "Source. And Next.js 13 Ready Free."
+    {
+      title: 'Financial Management',
+      desc: "Data Visualization and key data flow"
+    },
+    {
+      title: 'Document Management',
+      desc: "and paste into your apps. Free."
+    },
+    {
+      title: "Project Management",
+      desc: "Source. And Next.js 13 Ready Free."
+    }
   ]
 
   return (
-    <div className="relative min-h-screen w-full overflow-hidden ">
+    <div className="relative w-full ">
 
       {/* Animated background shapes */}
       <div className="absolute inset-0 overflow-hidden">
@@ -73,7 +83,7 @@ export default function LandingPage() {
           transition={{ duration: 0.5 }}
           className="flex flex-col gap-6"
         >
-          <div className="relative py-16">
+          <div className="relative py-8">
             <h1 className="text-3xl font-bold tracking-tight lg:text-4xl xl:text-5xl text-center  ">
               All-in-One
 
@@ -81,21 +91,21 @@ export default function LandingPage() {
               </span>
               for Your Bussines
             </h1>
-            <div className="absolute  h-20 w-20 animate-spin-slow rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20 blur-lg" />
+            <div className="absolute  h-14 w-20 animate-spin-slow rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20 blur-lg" />
           </div>
 
-          <div className="text-lg  py-2 flex justify-around ">
+          <div className="text-lg  py-2 grid md:grid-cols-3 justify-around ">
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="flex flex-col mx-2  backdrop-blur-sm  bg- hover:text-gray-700"
+                className="flex flex-col m-2  backdrop-blur-sm  hover:shadow-pink-400  bg- hover:text-gray-700 transition-all"
               >
-                <CardHeader className="text-pink-500 font-bold">
-                  API Service
+                <CardHeader className="text-pink-500 font-bold pb-2">
+                  {feature.title}
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
-                    {feature}
+                    {feature.desc}
                   </CardDescription>
 
                 </CardContent>
@@ -104,7 +114,7 @@ export default function LandingPage() {
           </div>
 
           <div
-            className="flex items-center gap-4  w-full"
+            className="grid  md:grid-cols-2 items-center gap-4 "
           >
             <Link href={'/signup'}>
               <Button
@@ -113,7 +123,7 @@ export default function LandingPage() {
               >
                 Sign up
                 <ArrowRight className="ml-2 inline-block transition-transform group-hover:translate-x-1 " />
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 opacity-0 transition-opacity " />
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 opacity-0 transition-opacity" />
               </Button>
             </Link>
             <Link href={'/dashboard'}>
@@ -121,7 +131,7 @@ export default function LandingPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="rounded-full border-2 px-8 py- text-lg font-semibold transition-all hover:scale-105 hover:bg-gray-50"
+                className="rounded-full border-2 px-8 py- text-lg font-semibold transition-all hover:scale-105 hover:bg-gray-50 w-full"
               >
                 Demo
               </Button>
@@ -133,9 +143,9 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1 }}
-            className="space-y-4"
+            className="space-y-4  items-center"
           >
-            <div className="flex gap-6 py-12">
+            <div className="flex gap-6 py-12 grid grid-cols-4 ">
               {[
                 { Icon: Facebook, color: "blue", href: "#" },
                 { Icon: Youtube, color: "red", href: "#" },
@@ -152,7 +162,7 @@ export default function LandingPage() {
                     className={`group relative block p-2 text-${color}-700`}
                   >
                     <div className="absolute inset-0 rounded-lg bg-gray-100 opacity-0 transition-opacity group-hover:opacity-100" />
-                    <Icon className="relative h-6 w-6" />
+                    <Icon className="relative h-6 w-6 m-auto" />
                     <span className="sr-only">Social Media Link</span>
                   </Link>
                 </motion.div>
