@@ -65,16 +65,16 @@ export default function LandingPage() {
 
   const features = [
     {
-      title: 'Financial Management',
-      desc: "Data Visualization and key data flow"
+      title: 'Pixel-Perfect Components',
+      desc: "Designed for a seamless user experience."
     },
     {
-      title: 'Document Management',
-      desc: "and paste into your apps. Free."
+      title: 'Responsive & Scalable',
+      desc: "Works flawlessly on all devices."
     },
     {
-      title: "Project Management",
-      desc: "Source. And Next.js 13 Ready Free."
+      title: " Fully Customizable ",
+      desc: "Tailor colors, fonts, and layouts to match your brand."
     }
   ]
 
@@ -98,13 +98,13 @@ export default function LandingPage() {
           transition={{ duration: 0.5 }}
           className="flex flex-col gap-6"
         >
-          <div className="relative py-8">
-            <h1 className="text-3xl font-bold tracking-tight lg:text-4xl xl:text-5xl text-center text-transparent bg-gradient-to-t bg-clip-text from-zinc-500 to-gray-800 ">
-              All-in-One
+          <div className="relative py-6">
+            <h1 className="text-5xl font-bold tracking-tight lg:text-4xl xl:text-5xl text-center text-transparent bg-gradient-to-t bg-clip-text from-zinc-500 to-gray-800 ">
+            Build a Stunning  
 
-              <span className="bg-gradient-to-r from-pink-500 to-cyan-500 bg-clip-text text-transparent mx-2">Toolkit
+              <span className="bg-gradient-to-r from-pink-500 to-cyan-500 bg-clip-text text-transparent mx-2">Interfaces 
               </span>
-              for Your Bussines
+              with Ease
             </h1>
             <div className="absolute  h-14 w-20 animate-spin-slow rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20 blur-lg" />
           </div>
@@ -113,7 +113,7 @@ export default function LandingPage() {
             {features.map((feature, index) => (
               <Card
                 key={index}
-                className="flex flex-col m-2  backdrop-blur-sm  hover:shadow-pink-400  bg- hover:text-gray-700 transition-all"
+                className="flex flex-col m-2  backdrop-blur-sm  hover:border-pink-400  bg- hover:text-gray-700 transition-all"
               >
                 <CardHeader className="text-pink-500 font-bold pb-2">
                   {feature.title}
@@ -133,10 +133,10 @@ export default function LandingPage() {
           >
             <Link href={'/signup'}>
               <Button
-                className="group relative overflow-hidden rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 px-8 py-2 text-lg font-semibold text-white transition-all hover:scale-105 w-full"
+                className="group text-lg relative overflow-hidden rounded-full bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 px-8 py-2 text-lg font-semibold text-white transition-all hover:scale-105 w-full"
                 size="lg"
               >
-                Sign up
+             Get Started
                 <ArrowRight className="ml-2 inline-block transition-transform group-hover:translate-x-1 " />
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 opacity-0 transition-opacity" />
               </Button>
@@ -148,7 +148,7 @@ export default function LandingPage() {
                 variant="outline"
                 className="rounded-full border-2 px-8 py- text-lg font-semibold transition-all hover:scale-105 hover:bg-gray-50 w-full"
               >
-                Demo
+            Components
               </Button>
             </Link>
 
@@ -209,7 +209,8 @@ export default function LandingPage() {
               ease: "easeInOut",
             }}
           >  <h1 className="text-2xl font-bold tracking-tight bg-gradient-to-r from-pink-500 to-cyan-500 bg-clip-text text-transparent">
-              Essential <span className="text-gray-800">Tools</span> Used in Every Business Field
+Unlock the power of modern design with our UI Kit—crafted for developers, designers, and startups.
+
 
 
 
