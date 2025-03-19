@@ -100,7 +100,7 @@ export default function LandingPage() {
         >
           <div className="relative py-6">
             <h1 className="text-3xl font-bold tracking-tight lg:text-4xl xl:text-5xl text-center text-transparent bg-gradient-to-t bg-clip-text from-zinc-500 to-gray-800 ">
-            Build a Stunning  
+            Muath a Stunning  
 
               <span className="bg-gradient-to-r from-pink-500 to-cyan-500 bg-clip-text text-transparent mx-2">Interfaces 
               </span>
